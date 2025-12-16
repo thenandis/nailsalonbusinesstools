@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknail_salon_budget_tool=self.webpackChunknail_salon_budget_tool||[]).push([[685],{685:(e,a,l)=>{new WeakMap;new Set}}]);
