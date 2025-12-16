@@ -78,7 +78,6 @@ export default function NailSalonW2vs1099Model() {
   setSelectedYear('2026');
   setSelectedLocality(minWageData.data['2026']?.[0]?.city || '');
   setLocalitySearchTerm('');
-  setShowSmallEmployerInDropdown(false);
   setUseSmallEmployerRate(false);
     // Only clear model data, NOT budget tool values
     localStorage.removeItem('w2vs1099ModelData');
@@ -174,18 +173,6 @@ export default function NailSalonW2vs1099Model() {
   });
   const [localitySearchTerm, setLocalitySearchTerm] = useState('');
   const [isLocalityDropdownOpen, setIsLocalityDropdownOpen] = useState(false);
-  const [showSmallEmployerInDropdown, setShowSmallEmployerInDropdown] = useState(() => {
-    const savedData = localStorage.getItem('w2vs1099ModelData');
-    if (savedData) {
-      try {
-        const parsedData = JSON.parse(savedData);
-        return parsedData.showSmallEmployerInDropdown || false;
-      } catch (e) {
-        return false;
-      }
-    }
-    return false;
-  });
   const [useSmallEmployerRate, setUseSmallEmployerRate] = useState(() => {
     const savedData = localStorage.getItem('w2vs1099ModelData');
     if (savedData) {
@@ -423,7 +410,6 @@ export default function NailSalonW2vs1099Model() {
   hoursPerWeek,
       selectedLocality,
       selectedYear,
-      showSmallEmployerInDropdown,
       useSmallEmployerRate,
       monthlyRentPerTech,
       // Budget Tool employer expenses
@@ -459,7 +445,7 @@ export default function NailSalonW2vs1099Model() {
     numTechnicians, operationHours, daysOpenPerMonth, daysOpenPerWeek,
   appointmentsPerTechPerDay, avgAppointmentDuration,
     socialSecurityRate, medicareRate, futaRate, sutaRate, ettRate, workersCompRate, paidSickLeaveRate,
-    selectedLocality, selectedYear, showSmallEmployerInDropdown, useSmallEmployerRate
+    selectedLocality, selectedYear, useSmallEmployerRate
   ]);
 
   // When hoursPerWeek changes (user edited hours), update daysOpenPerMonth accordingly.
@@ -887,7 +873,7 @@ export default function NailSalonW2vs1099Model() {
           </select>
 
           <label style={{ fontWeight: 'bold' }}>Locality:</label>
-          <div style={{ position: 'relative', minWidth: '250px' }}>
+          <div style={{ position: 'relative', minWidth: '400px' }}>
             <input
               type="text"
               value={localitySearchTerm || selectedLocality}
@@ -911,7 +897,7 @@ export default function NailSalonW2vs1099Model() {
                 top: '100%',
                 left: 0,
                 right: 0,
-                maxHeight: '200px',
+                maxHeight: '400px',
                 overflowY: 'auto',
                 backgroundColor: 'white',
                 border: '1px solid #ccc',
@@ -945,8 +931,13 @@ export default function NailSalonW2vs1099Model() {
                         <div style={{ fontWeight: 'bold' }}>{loc.city}</div>
                         <div style={{ fontSize: '12px', color: '#666' }}>
                           ${loc.minimumWage}/hour
-                          {showSmallEmployerInDropdown && loc.smallEmployerRate && ` | Small: $${loc.smallEmployerRate}/hour`}
+                          {loc.smallEmployerRate && ` | Small Employer: $${loc.smallEmployerRate}/hour`}
                         </div>
+                        {loc.notes && (
+                          <div style={{ fontSize: '11px', color: '#888', fontStyle: 'italic', marginTop: '4px' }}>
+                            {loc.notes}
+                          </div>
+                        )}
                       </div>
                     );
                   })}
@@ -965,36 +956,6 @@ export default function NailSalonW2vs1099Model() {
           }}>
             ${selectedMinWage}/hour
           </div>
-        </div>
-        
-        {/* Checkbox to show small employer rates in dropdown */}
-        <div style={{ 
-          marginTop: '15px',
-          padding: '10px',
-          backgroundColor: '#f8f9fa',
-          borderRadius: '4px',
-          border: '1px solid #dee2e6'
-        }}>
-          <label style={{ 
-            display: 'flex', 
-            alignItems: 'center', 
-            gap: '8px',
-            cursor: 'pointer',
-            fontSize: '14px',
-            fontWeight: 'normal'
-          }}>
-            <input
-              type="checkbox"
-              checked={showSmallEmployerInDropdown}
-              onChange={(e) => setShowSmallEmployerInDropdown(e.target.checked)}
-              style={{ 
-                width: '16px', 
-                height: '16px',
-                cursor: 'pointer'
-              }}
-            />
-            Show Small Employer rates in dropdown (where available)
-          </label>
         </div>
         
         {/* Small Employer Checkbox - Always visible section */}
