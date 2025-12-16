@@ -1,0 +1,572 @@
+{
+  "source": "UC Berkeley Labor Center",
+  "url": "https://laborcenter.berkeley.edu/inventory-of-us-city-and-county-minimum-wage-ordinances/",
+  "lastUpdated": "2025-12-02",
+  "data": {
+    "2026": [
+      {
+        "city": "Alameda",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 17.46,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Belmont",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 18.95,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Berkeley",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 19.18,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Burlingame",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 17.86,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Cupertino",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 18.70,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Daly City",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 17.50,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "East Palo Alto",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 17.90,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "El Cerrito",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 18.82,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Emeryville",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 19.90,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Foster City",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 17.85,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Fremont",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 17.75,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Half Moon Bay",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 17.91,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Hayward",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 17.79,
+        "smallEmployerRate": 16.90,
+        "notes": "Hayward's rate for small employers ($16.90) is the same as the state of California's minimum wage."
+      },
+      {
+        "city": "Los Altos",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 18.70,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Los Angeles",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 17.87,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Los Angeles County (unincorporated)",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 17.81,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Malibu",
+        "effectiveDate": "7/1/2024",
+        "minimumWage": 17.27,
+        "smallEmployerRate": null,
+        "notes": "5/21/2025: Malibu City Council approved a one-year suspension of the scheduled minimum wage increase 'to support businesses impacted by the Palisades Fire.'"
+      },
+      {
+        "city": "Menlo Park",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 17.55,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Milpitas",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 18.20,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Mountain View",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 19.70,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Novato",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 17.46,
+        "smallEmployerRate": 16.90,
+        "notes": "Very large business rate (100+ employees): $17.73. Small business rate ($16.90) is the same as the state of California's minimum wage."
+      },
+      {
+        "city": "Oakland",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 17.34,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Palo Alto",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 18.70,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Pasadena",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 18.04,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Petaluma",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 18.31,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Redwood City",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 18.65,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Richmond",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 19.18,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "San Carlos",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 17.75,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "San Diego",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 17.75,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "San Francisco",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 19.18,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "San Jose",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 18.45,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "San Mateo",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 18.60,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "San Mateo County (unincorporated)",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 17.95,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Santa Clara",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 18.70,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Santa Monica",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 17.81,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Santa Rosa",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 18.21,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Sonoma",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 18.47,
+        "smallEmployerRate": 17.38,
+        "notes": null
+      },
+      {
+        "city": "South San Francisco",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 18.15,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Sunnyvale",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 19.50,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "West Hollywood",
+        "effectiveDate": "1/1/2026",
+        "minimumWage": 20.25,
+        "smallEmployerRate": null,
+        "notes": null
+      }
+    ],
+    "2025": [
+      {
+        "city": "Alameda",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 17.46,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Belmont",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 18.30,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Berkeley",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 19.18,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Burlingame",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.43,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Cupertino",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 18.20,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Daly City",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.07,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "East Palo Alto",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.45,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "El Cerrito",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 18.34,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Emeryville",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 19.90,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Foster City",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.39,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Fremont",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 17.75,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Half Moon Bay",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.47,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Hayward",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.36,
+        "smallEmployerRate": 16.50,
+        "notes": "Hayward's rate for small employers is the same as the state of California's minimum wage."
+      },
+      {
+        "city": "Los Altos",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 18.20,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Los Angeles",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 17.87,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Los Angeles County (unincorporated)",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 17.81,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Malibu",
+        "effectiveDate": "7/1/2024",
+        "minimumWage": 17.27,
+        "smallEmployerRate": null,
+        "notes": "5/21/2025: Malibu City Council approved a one-year suspension of the scheduled minimum wage increase 'to support businesses impacted by the Palisades Fire.'"
+      },
+      {
+        "city": "Menlo Park",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.10,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Milpitas",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 18.20,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Mountain View",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 19.20,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Novato",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.00,
+        "smallEmployerRate": 16.50,
+        "notes": "Very large business rate (100+ employees): $17.27. Small business rate ($16.42) is overridden by the state's $16.50 minimum wage."
+      },
+      {
+        "city": "Oakland",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 16.89,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Palo Alto",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 18.20,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Pasadena",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 18.04,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Petaluma",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.97,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Redwood City",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 18.20,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Richmond",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.77,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "San Carlos",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.32,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "San Diego",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.25,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "San Francisco",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 19.18,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "San Jose",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.95,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "San Mateo",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.95,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "San Mateo County (unincorporated)",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.46,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Santa Clara",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 18.20,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Santa Monica",
+        "effectiveDate": "7/1/2025",
+        "minimumWage": 17.81,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Santa Rosa",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.87,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Sonoma",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 18.02,
+        "smallEmployerRate": 16.96,
+        "notes": null
+      },
+      {
+        "city": "South San Francisco",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 17.70,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "Sunnyvale",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 19.00,
+        "smallEmployerRate": null,
+        "notes": null
+      },
+      {
+        "city": "West Hollywood",
+        "effectiveDate": "1/1/2025",
+        "minimumWage": 19.65,
+        "smallEmployerRate": null,
+        "notes": null
+      }
+    ]
+  },
+  "notes": "Small Employer is defined as employing 25 or fewer workers unless otherwise noted. Data sourced from UC Berkeley Labor Center, last updated 12-2-2025."
+}

@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "react-scripts --max_old_space_size=4096 start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start:memory": "node --max-old-space-size=4096 node_modules/.bin/react-scripts start"
+  }
+}

@@ -1,0 +1,95 @@
+Strategic Model:											
+"Explores operational efficiency, pricing strategy, cost recovery (covering fixed and variable costs), market competitiveness (attracting enough bookings),
+ and profitability (ensuring sustainable margins)."											
+											
+	Description		xx Inputs				Additional Information	AI Prompt	Bibliography	Explanation	
+Operational Efficiency:	Number of technicians available to serve customers		 3 	 5 	 10 					"Determines labor capacity. More technicians can increase revenue, but may increase expenses if underutilized."	
+	Operation hours per day - Hours your salon is open each day		 8 	 8 	 8 		Caution - Over 8 hours per day would create overtime expense in W2 model.			Defines the daily time window available for appointments. Longer hours increase availability but may also raise operational costs.	
+	Days open per month - Days per month your salon is operational		 26 	 26 	 26 					"Impacts total monthly capacity. Fewer open days reduce the opportunity to generate revenue, while more days increase potential utilization."	
+	Total Available Hours per month (used in Utilization calc)		 624 	" 1,040 "	" 2,080 "					Techs x Hours x Days - Represents your total capacity. Compare this to actual hours booked to assess resources effectiveness.	
+											
+	Appointments/Customers booked per day per Technician		 6 	 8 	 10 		"California avg is 6 to 12 clients per day, depending on type of salon and service complexity."	How many customers on average can a salon tech in California handle?	Per Owners Oasis and Dojo Business	Reflects actual demand. This is key to calculating utilization and revenue. 	
+	Actual Hours Booked- monthly (used in Utilization calc)		 468 	" 1,040 "	" 2,600 "					Days open x Appt length x Customer/Day - Shows how your available time is being utilized for appointments. A key indicator of operational efficiency.	
+	Utilization Rate (i.e billable hours)		75%	100%	125%					Utilization Rate - Indicates how efficiently your resources are being used. 	
+											
+Sales Price/Costs:	Price charged per appointment/service		$50.0 	$50.0 	$50.0 					"Directly influences revenue. Setting the right price is crucial for competitiveness, profitability, and covering costs."	
+	Variable hourly Technician wages (average of # of Tech input above)		$20.0 	$20.0 	$20.0 		Ensure this includes benefit expense. 			Average wage per hired Technicians. This must exceed CA minimum wage.	
+	Commission % Tech Receives per Service (depends on model)		40%	40%	40%						
+	Variable Cost per appointment (excludes labor)		$2.50 	$2.50 	$2.50 					"Includes costs that scale with each appointment (e.g., supplies, credit card transactions). Helps determine profit margins and break-even analysis."	
+	"Fixed Costs - monthly (e.g., rent, salaries, utilities, etc.)"		"$15,000"	"$25,000"	"$50,000"		Should we spend time detailing this out?			"Costs (e.g., rent, utilities) not impacted by appointment volume . Essential for calculating the break-even point and long-term sustainability."	
+	Commission or Hourly Wage Model - (select from drop down in cell)	Commission	$15.00 	$20.00 	$20.00 						
+	W2 or 1099 - Benefits impact  (select from drop down in cell)	W2	$17.04 	$22.72 	$22.72 						
+	Total Variable cost		"$11,803 "	"$26,229 "	"$53,758 "					(Variable Costs x Ttl Appts) +( Variable wages x Ttl Available Hours)	
+											
+	Variable Cost - monthly		"$11,803"	"$26,229"	"$53,758"					(Variable Costs x Ttl Appts) +( Variable wages x Ttl Available Hours)	
+	Variable Cost per appointment		$2.50	$2.50	$2.50					"Includes costs that scale with each appointment (e.g., supplies, credit card transactions). Helps determine profit margins and break-even analysis."	
+	Price per appointment		$50 	$50 	$50 					"Directly influences revenue. Setting the right price is crucial for competitiveness, profitability, and covering costs."	
+Break-Even Point:	Break Even Point appointments		 564 	" 1,079 "	" 2,184 "					Break-Even Analysis - It tells you how many appointments you need to cover all costs. This is crucial for setting a minimum viable price.	
+	Actual appointments per schedule above - Appts per day x Days open		 468 	" 1,040 "	" 2,600 "					#REF!	
+											
+Profit/Margin:	"Total Revenue 
+(Booked appointments x price per appointment)"		"$23,400"	"$52,000"	"$130,000"						
+	Total Expenses (Fixed + variable)		"$38,638"	"$77,500"	"$157,558"						
+	Net Profit		"-$15,238"	"-$25,500"	"-$27,558"						
+	Net Margin		-65%	-49%	-21%						
+											
+Pricing Strategy Model:	Current Utilization Rate (calculated above)		75%	100%	125%					Utilization Rate - Indicates how efficiently your resources are being used. 	
+	Desired/Ttarget utilization rate - Refer to Utilization table below		75%	75%	75%					Target Utilization Rate - Sets a goal for operational efficiency. Can guide pricing and capacity planning decisions.	
+	Base price per appointment (input above)		$50 	$50 	$50 					Serves as the starting point for pricing strategy. Adjustments may be needed to meet utilization or revenue targets.	
+	Price Adjustment/Appointment mix		$50.00 	$62.50 	$75.00 		On a separate document provide pricing strategies			"A strategic adjustment to pricing aimed at achieving target utilization. Lower prices may attract more bookings, improving efficiency."	
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+Lists:											
+W2											
+1099											
+											
+Commission											
+Hourly											

@@ -1,0 +1,71 @@
+/* MainAppRouter specific styles to override any conflicting CSS */
+.main-app-router {
+  min-height: 100vh !important;
+  background-color: #f8f9fa !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+.main-app-router .main-app-header {
+  background-color: #343a40 !important;
+  color: #ffffff !important;
+  padding: 0 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  position: relative !important;
+  z-index: 1000 !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+.main-app-router .main-app-header .main-app-title {
+  margin: 0 !important;
+  padding: 20px 20px 10px !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
+
+.main-app-router .main-app-header .main-nav-button {
+  padding: 15px 25px !important;
+  margin-right: 2px !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px 8px 0 0 !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+.main-app-router .main-app-header .main-nav-button.active {
+  background-color: #007bff !important;
+  font-weight: bold !important;
+  border-bottom: 3px solid #ffc107 !important;
+}
+
+.main-app-router .main-app-header .main-nav-button.inactive {
+  background-color: transparent !important;
+  border-bottom: 3px solid transparent !important;
+}
+
+.main-app-router .main-app-header .main-nav-button.inactive:hover {
+  background-color: #495057 !important;
+}
+
+.main-app-router .main-app-footer {
+  background-color: #343a40 !important;
+  color: #adb5bd !important;
+  text-align: center !important;
+  padding: 15px !important;
+  font-size: 14px !important;
+  width: 100% !important;
+}
+
+.main-app-router .main-content-area {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
+  background-color: white !important;
+  min-height: calc(100vh - 140px) !important;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05) !important;
+}
