@@ -5,13 +5,13 @@ yarn-debug.log*
 yarn-error.log*
 
 # Production builds
-/build
-/dist
-/parkthebuild
+# /build
+# /dist
+# /parkthebuild
 
 # Deployment packages
-*.zip
-nail-salon-business-tools-*/
+# *.zip
+# nail-salon-business-tools-*/
 
 # Environment variables
 .env
