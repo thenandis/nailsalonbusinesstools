@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Salon Business Tools v6.0 - Technical Deployment Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #e74c3c 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .version-badge {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .content {
+            padding: 30px 40px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        h3 {
+            color: #e74c3c;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        h4 {
+            color: #2c3e50;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .deployment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin: 20px 0;
+        }
+        .deployment-box {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #e74c3c;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .alert {
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid;
+        }
+        .alert-success {
+            background-color: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        .alert-info {
+            background-color: #d1ecf1;
+            border-color: #17a2b8;
+            color: #0c5460;
+        }
+        .alert-warning {
+            background-color: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+        .alert-danger {
+            background-color: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+        .step-list li {
+            counter-increment: step-counter;
+            margin: 15px 0;
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+            position: relative;
+        }
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: -15px;
+            top: 15px;
+            background: #e74c3c;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        .file-structure {
+            background: #343a40;
+            color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            margin: 15px 0;
+            white-space: pre;
+            overflow-x: auto;
+        }
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .back-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background: #c0392b;
+        }
+        .tech-specs {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #dee2e6;
+            margin: 20px 0;
+        }
+        .provider-logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+        .cloud-providers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .provider-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #dee2e6;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .command-section {
+            background: #f1f3f4;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚙️ Technical Deployment Guide</h1>
+            <p><strong>CHNSC Nail Salon Business Tools v5.0</strong></p>
+            <p>Complete Setup & Deployment Instructions for IT Professionals</p>
+            <div class="version-badge">Version 6.0 - December 15, 2025</div>
+        </div>
+
+        <div class="content">
+            <a href="../CHNSC_StartPage.html" class="back-button">← Back to Application</a>
+            
+            <div class="section">
+                <h2>📋 Technical Overview</h2>
+                
+                <div class="tech-specs">
+                    <h3>Application Architecture</h3>
+                    <ul>
+                        <li><strong>Framework:</strong> React.js v18.2.0 with functional components</li>
+                        <li><strong>Language Support:</strong> Complete i18n implementation (English/Vietnamese)</li>
+                        <li><strong>Build System:</strong> Create Nail Salon Business Tools with optimization</li>
+                        <li><strong>Storage:</strong> LocalStorage API for client-side persistence</li>
+                        <li><strong>UI Framework:</strong> Custom CSS with responsive grid system</li>
+                        <li><strong>Export Format:</strong> CSV generation via JavaScript</li>
+                        <li><strong>Bundle Size:</strong> ~79.85 kB main bundle (gzipped)</li>
+                    </ul>
+                </div>
+
+                <div class="alert alert-info">
+                    <strong>Static Application:</strong> No server-side processing required. Pure client-side JavaScript application.
+                </div>
+
+                <h3>📁 Package Contents</h3>
+                <div class="file-structure">nail-salon-business-tools-v5.0-nov07-2025/
+├── CHNSC_StartPage.html           # Main application entry point
+├── static/
+│   ├── css/
+│   │   ├── main.[hash].css        # Compiled application styles
+│   │   └── main.[hash].css.map    # Source map for debugging
+│   ├── js/
+│   │   ├── main.[hash].js         # Compiled React application
+│   │   ├── main.[hash].js.map     # Source map for debugging
+│   │   └── [hash].js              # Runtime chunks
+│   └── media/
+│       └── [assets]               # Images and other static assets
+├── documentation/
+│   ├── USER-INSTRUCTIONS.html
+│   └── TECHNICAL-DEPLOYMENT-v5.0.html
+├── manifest.json                  # PWA manifest
+├── robots.txt                     # Search engine directives
+├── favicon.ico                    # Application favicon
+├── logo192.png                    # PWA icon (192x192)
+├── logo512.png                    # PWA icon (512x512)
+├── service-worker.js              # Service worker for offline support
+├── service-worker.js.map          # Service worker source map
+└── asset-manifest.json            # Build asset mapping</div>
+            </div>
+
+            <div class="section">
+                <h2>🖥️ Web Server Deployment</h2>
+                
+                <div class="alert alert-success">
+                    <strong>Simple Deployment:</strong> No server-side processing required. Any web server capable of serving static files will work.
+                </div>
+
+                <div class="deployment-grid">
+                    <div class="deployment-box">
+                        <h3>🚀 Apache HTTP Server</h3>
+                        <h4>Setup Instructions:</h4>
+                        <ol>
+                            <li>Copy entire application folder to your web root (e.g., <code>/var/www/html/</code>)</li>
+                            <li>Ensure Apache is configured to serve static files</li>
+                            <li>Set appropriate permissions:
+                                <div class="code-block">sudo chown -R www-data:www-data /var/www/html/nail-salon-tools/
+sudo chmod -R 755 /var/www/html/nail-salon-tools/</div>
+                            </li>
+                        </ol>
+                        
+                        <h4>Optional .htaccess Configuration:</h4>
+                        <div class="code-block"># Enable compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Set cache headers
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/ico "access plus 1 year"
+</IfModule></div>
+                    </div>
+                    
+                    <div class="deployment-box">
+                        <h3>⚡ Nginx</h3>
+                        <h4>Basic Configuration:</h4>
+                        <div class="code-block">server {
+    listen 80;
+    server_name your-domain.com;
+    root /var/www/nail-salon-tools;
+    index CHNSC_StartPage.html;
+
+    # Enable gzip compression
+    gzip on;
+    gzip_types text/css application/javascript application/json text/html;
+
+    # Cache static assets
+    location ~* \.(css|js|png|ico)$ {
+        expires 1M;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # Serve main application
+    location / {
+        try_files $uri $uri/ /CHNSC_StartPage.html;
+    }
+}</div>
+                        
+                        <h4>Deployment Steps:</h4>
+                        <ol>
+                            <li>Copy application folder to <code>/var/www/nail-salon-tools</code></li>
+                            <li>Update Nginx configuration</li>
+                            <li>Test configuration: <code>nginx -t</code></li>
+                            <li>Reload Nginx: <code>systemctl reload nginx</code></li>
+                        </ol>
+                    </div>
+                    
+                    <div class="deployment-box">
+                        <h3>🖥️ IIS (Windows Server)</h3>
+                        <h4>Setup Process:</h4>
+                        <ol>
+                            <li>Open IIS Manager</li>
+                            <li>Right-click "Default Web Site" → Add Application</li>
+                            <li>Set Alias: <code>nail-salon-tools</code></li>
+                            <li>Set Physical Path to application folder</li>
+                            <li>Ensure MIME types are configured for .json, .map files</li>
+                        </ol>
+                        
+                        <h4>Optional web.config:</h4>
+                        <div class="code-block"><?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <staticContent>
+            <mimeMap fileExtension=".json" mimeType="application/json" />
+            <mimeMap fileExtension=".map" mimeType="application/json" />
+        </staticContent>
+        <httpCompression>
+            <dynamicTypes>
+                <add mimeType="application/javascript" enabled="true" />
+                <add mimeType="text/css" enabled="true" />
+            </dynamicTypes>
+        </httpCompression>
+    </system.webServer>
+</configuration></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>☁️ Cloud Platform Deployment</h2>
+                
+                <div class="alert alert-info">
+                    <strong>Cloud-Ready:</strong> The application is designed for easy deployment on all major cloud platforms.
+                </div>
+
+                <div class="cloud-providers">
+                    <div class="provider-box">
+                        <h3>🌐 Netlify (Recommended for Simple Deployment)</h3>
+                        
+                        <h4>Method 1: Drag & Drop</h4>
+                        <ol class="step-list">
+                            <li>Visit <a href="https://netlify.com">netlify.com</a> and create account</li>
+                            <li>Drag and drop the entire application folder to Netlify dashboard</li>
+                            <li>Application is live immediately with HTTPS</li>
+                            <li>Custom domain can be configured in settings</li>
+                        </ol>
+
+                        <h4>Method 2: Git Integration</h4>
+                        <div class="code-block"># If you have the source code in Git
+1. Connect Netlify to your Git repository
+2. Set build command: npm run build
+3. Set publish directory: build
+4. Deploy automatically on Git push</div>
+
+                        <div class="alert alert-success">
+                            <strong>Benefits:</strong> Automatic HTTPS, CDN, form handling, and easy custom domain setup.
+                        </div>
+                    </div>
+                    
+                    <div class="provider-box">
+                        <h3>🚀 Vercel</h3>
+                        
+                        <h4>Deployment Steps:</h4>
+                        <ol class="step-list">
+                            <li>Install Vercel CLI: <code>npm i -g vercel</code></li>
+                            <li>Navigate to application folder</li>
+                            <li>Run deployment command</li>
+                            <li>Follow prompts for configuration</li>
+                        </ol>
+
+                        <div class="code-block"># Command line deployment
+cd nail-salon-business-tools-v5.0-nov07-2025
+vercel --prod
+
+# Or drag & drop at vercel.com</div>
+
+                        <div class="alert alert-info">
+                            <strong>Features:</strong> Instant deployment, automatic HTTPS, global CDN, and analytics.
+                        </div>
+                    </div>
+                    
+                    <div class="provider-box">
+                        <h3>📦 AWS S3 + CloudFront</h3>
+                        
+                        <h4>S3 Bucket Setup:</h4>
+                        <div class="code-block"># AWS CLI commands
+aws s3 mb s3://your-nail-salon-app-bucket
+aws s3 website s3://your-nail-salon-app-bucket --index-document CHNSC_StartPage.html
+aws s3 sync . s3://your-nail-salon-app-bucket --delete</div>
+
+                        <h4>CloudFront Distribution:</h4>
+                        <ol>
+                            <li>Create CloudFront distribution</li>
+                            <li>Point origin to S3 bucket</li>
+                            <li>Enable compression</li>
+                            <li>Set default root object to <code>CHNSC_StartPage.html</code></li>
+                        </ol>
+
+                        <div class="alert alert-warning">
+                            <strong>Cost:</strong> Very low cost for static hosting, pay only for usage.
+                        </div>
+                    </div>
+                    
+                    <div class="provider-box">
+                        <h3>☁️ Google Cloud Platform</h3>
+                        
+                        <h4>Cloud Storage + CDN:</h4>
+                        <div class="code-block"># Create bucket and upload
+gsutil mb gs://your-nail-salon-app
+gsutil -m cp -r . gs://your-nail-salon-app
+gsutil web set -m CHNSC_StartPage.html gs://your-nail-salon-app</div>
+
+                        <h4>App Engine (Alternative):</h4>
+                        <div class="code-block"># Create app.yaml
+runtime: python39
+handlers:
+- url: /
+  static_files: CHNSC_StartPage.html
+  upload: CHNSC_StartPage.html
+- url: /(.*)
+  static_files: \1
+  upload: (.*)</div>
+
+                        <div class="command-section">
+                            <strong>Deploy:</strong> <code>gcloud app deploy</code>
+                        </div>
+                    </div>
+                    
+                    <div class="provider-box">
+                        <h3>🔷 Microsoft Azure</h3>
+                        
+                        <h4>Static Web Apps:</h4>
+                        <ol class="step-list">
+                            <li>Create Static Web App resource in Azure Portal</li>
+                            <li>Connect to Git repository (optional)</li>
+                            <li>Upload application files via CLI or portal</li>
+                            <li>Configure custom domain if needed</li>
+                        </ol>
+
+                        <h4>Blob Storage + CDN (Alternative):</h4>
+                        <div class="code-block"># Azure CLI
+az storage blob upload-batch -d '$web' -s . --account-name yourstorageaccount
+az cdn endpoint create --resource-group myResourceGroup --name myendpoint --profile-name mycdnprofile --origin yourstorageaccount.blob.core.windows.net</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔧 Advanced Configuration</h2>
+                
+                <h3>🔐 HTTPS Setup</h3>
+                <div class="alert alert-danger">
+                    <strong>Security Requirement:</strong> Always serve over HTTPS in production, especially for business applications handling sensitive data.
+                </div>
+
+                <div class="deployment-box">
+                    <h4>Let's Encrypt (Free SSL)</h4>
+                    <div class="code-block"># For Apache/Nginx on Ubuntu/Debian
+sudo apt install certbot python3-certbot-apache  # For Apache
+sudo apt install certbot python3-certbot-nginx   # For Nginx
+
+# Generate certificate
+sudo certbot --apache -d yourdomain.com          # For Apache
+sudo certbot --nginx -d yourdomain.com           # For Nginx
+
+# Auto-renewal
+sudo crontab -e
+0 12 * * * /usr/bin/certbot renew --quiet</div>
+                </div>
+
+                <h3>⚡ Performance Optimization</h3>
+                
+                <div class="deployment-grid">
+                    <div class="deployment-box">
+                        <h4>Compression Setup</h4>
+                        <ul>
+                            <li><strong>Gzip:</strong> Enable for CSS, JS, HTML files</li>
+                            <li><strong>Brotli:</strong> Better compression for modern browsers</li>
+                            <li><strong>Expected Savings:</strong> 70-80% size reduction</li>
+                        </ul>
+                        
+                        <div class="code-block"># Nginx Brotli example
+load_module modules/ngx_http_brotli_filter_module.so;
+load_module modules/ngx_http_brotli_static_module.so;
+
+http {
+    brotli on;
+    brotli_comp_level 6;
+    brotli_types text/css application/javascript text/html application/json;
+}</div>
+                    </div>
+                    
+                    <div class="deployment-box">
+                        <h4>Caching Strategy</h4>
+                        <ul>
+                            <li><strong>Static Assets:</strong> 1 year cache (versioned files)</li>
+                            <li><strong>HTML:</strong> No cache or short cache</li>
+                            <li><strong>Service Worker:</strong> Handles offline caching</li>
+                        </ul>
+                        
+                        <div class="code-block"># Nginx caching example
+location ~* \.(js|css)$ {
+    expires 1y;
+    add_header Cache-Control "public, immutable";
+}
+
+location = /CHNSC_StartPage.html {
+    expires -1;
+    add_header Cache-Control "no-cache, no-store, must-revalidate";
+}</div>
+                    </div>
+                </div>
+
+                <h3>📊 Analytics & Monitoring</h3>
+                
+                <div class="deployment-box">
+                    <h4>Google Analytics Integration</h4>
+                    <p>To add Google Analytics, insert the following before the closing <code>&lt;/head&gt;</code> tag in <code>CHNSC_StartPage.html</code>:</p>
+                    
+                    <div class="code-block"><!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script></div>
+                </div>
+
+                <h3>🔒 Security Headers</h3>
+                
+                <div class="deployment-box">
+                    <h4>Recommended Security Headers</h4>
+                    <div class="code-block"># Nginx security headers
+add_header X-Frame-Options "SAMEORIGIN" always;
+add_header X-Content-Type-Options "nosniff" always;
+add_header X-XSS-Protection "1; mode=block" always;
+add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';" always;</div>
+
+                    <div class="alert alert-info">
+                        <strong>Note:</strong> Adjust Content-Security-Policy if you add external scripts (like Google Analytics).
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🧪 Testing & Validation</h2>
+                
+                <h3>✅ Pre-Deployment Checklist</h3>
+                <div class="step-list">
+                    <li><strong>File Integrity:</strong> Verify all files are present and not corrupted</li>
+                    <li><strong>Permissions:</strong> Ensure web server can read all files</li>
+                    <li><strong>MIME Types:</strong> Verify .json, .map files serve correctly</li>
+                    <li><strong>HTTPS:</strong> Confirm SSL certificate is valid and redirects work</li>
+                    <li><strong>Compression:</strong> Test that gzip/brotli is working</li>
+                    <li><strong>Mobile Testing:</strong> Verify responsive design on various devices</li>
+                    <li><strong>Browser Testing:</strong> Test in Chrome, Firefox, Safari, Edge</li>
+                    <li><strong>Language Switching:</strong> Verify both English and Vietnamese work</li>
+                    <li><strong>Save/Load:</strong> Test data persistence across browser sessions</li>
+                    <li><strong>Export Functions:</strong> Verify CSV export works correctly</li>
+                </div>
+
+                <h3>🔍 Troubleshooting Common Issues</h3>
+                
+                <div class="deployment-grid">
+                    <div class="deployment-box">
+                        <h4>Application Won't Load</h4>
+                        <ul>
+                            <li>Check browser console for JavaScript errors</li>
+                            <li>Verify all static files are accessible (404 errors)</li>
+                            <li>Ensure MIME types are configured correctly</li>
+                            <li>Check for CORS issues if serving from subdomain</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="deployment-box">
+                        <h4>Blank Page or Loading Issues</h4>
+                        <ul>
+                            <li>Verify JavaScript files are loading correctly</li>
+                            <li>Check Content-Security-Policy headers</li>
+                            <li>Ensure service worker isn't caching old version</li>
+                            <li>Clear browser cache and test in incognito mode</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="deployment-box">
+                        <h4>Save/Load Not Working</h4>
+                        <ul>
+                            <li>Check LocalStorage permissions in browser</li>
+                            <li>Verify HTTPS is enabled (required for some storage APIs)</li>
+                            <li>Test in different browsers to isolate issues</li>
+                            <li>Check browser storage quotas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>📈 Performance Testing</h3>
+                <div class="command-section">
+                    <strong>Tools for Performance Analysis:</strong>
+                    <ul>
+                        <li><strong>Google PageSpeed Insights:</strong> <a href="https://pagespeed.web.dev/">pagespeed.web.dev</a></li>
+                        <li><strong>GTmetrix:</strong> <a href="https://gtmetrix.com/">gtmetrix.com</a></li>
+                        <li><strong>WebPageTest:</strong> <a href="https://webpagetest.org/">webpagetest.org</a></li>
+                        <li><strong>Lighthouse:</strong> Built into Chrome DevTools</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔄 Maintenance & Updates</h2>
+                
+                <h3>📅 Regular Maintenance Tasks</h3>
+                <ul>
+                    <li><strong>Security Updates:</strong> Keep web server and OS updated</li>
+                    <li><strong>SSL Renewal:</strong> Monitor certificate expiration</li>
+                    <li><strong>Backup:</strong> Regular backups of application files</li>
+                    <li><strong>Performance Monitoring:</strong> Track loading times and user experience</li>
+                    <li><strong>Analytics Review:</strong> Monitor user engagement and feature usage</li>
+                </ul>
+
+                <h3>🔄 Application Updates</h3>
+                <div class="alert alert-info">
+                    <strong>Update Process:</strong> To update to a new version, simply replace the application files and clear browser caches.
+                </div>
+
+                <div class="deployment-box">
+                    <h4>Zero-Downtime Update Process</h4>
+                    <ol class="step-list">
+                        <li>Create backup of current version</li>
+                        <li>Upload new version to temporary directory</li>
+                        <li>Test new version thoroughly</li>
+                        <li>Atomically switch directories (symlink or rename)</li>
+                        <li>Verify update completed successfully</li>
+                        <li>Clear CDN cache if applicable</li>
+                    </ol>
+                </div>
+
+                <h3>📊 Monitoring Recommendations</h3>
+                <ul>
+                    <li><strong>Uptime Monitoring:</strong> Use services like UptimeRobot or Pingdom</li>
+                    <li><strong>Error Tracking:</strong> Implement client-side error logging</li>
+                    <li><strong>Performance Monitoring:</strong> Track Core Web Vitals</li>
+                    <li><strong>User Feedback:</strong> Provide mechanism for users to report issues</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>📞 Support & Resources</h2>
+                
+                <div class="deployment-grid">
+                    <div class="deployment-box">
+                        <h3>📚 Technical Documentation</h3>
+                        <ul>
+                            <li><strong>React.js:</strong> <a href="https://react.dev/">react.dev</a></li>
+                            <li><strong>Create Nail Salon Business Tools:</strong> <a href="https://create-react-app.dev/">create-react-app.dev</a></li>
+                            <li><strong>Web APIs:</strong> <a href="https://developer.mozilla.org/">developer.mozilla.org</a></li>
+                            <li><strong>Progressive Web Apps:</strong> <a href="https://web.dev/progressive-web-apps/">web.dev/pwa</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="deployment-box">
+                        <h3>🆘 Getting Help</h3>
+                        <ul>
+                            <li><strong>Technical Issues:</strong> <a href="mailto:info@cahealthynailsalons.org">info@cahealthynailsalons.org</a></li>
+                            <li><strong>Phone Support:</strong> (510) 643-4523</li>
+                            <li><strong>Website:</strong> <a href="https://www.cahealthynailsalons.org">cahealthynailsalons.org</a></li>
+                            <li><strong>Emergency:</strong> Include version number (5.0) and server details</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="alert alert-success">
+                    <strong>Community Support:</strong> This application was built by volunteer developers at Bankers without Borders. Technical questions and improvement suggestions are welcome.
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>California Healthy Nail Salon Collaborative (CHNSC)</strong></p>
+            <p>Technical Deployment Guide - Building worker power to transform the nail salon industry</p>
+            <p>© 2025 CHNSC. All rights reserved. | Built by volunteer developers at Bankers without Borders</p>
+            <p><em>Version 6.0 - December 15, 2025 | Last Updated: November 7, 2025</em></p>
+        </div>
+    </div>
+</body>
+</html>
