@@ -653,7 +653,7 @@ Data Source: Budget Tool (Tab 1) → W2 vs 1099 Model`}>
                 </div>
                 <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#17a2b8', marginTop: '5px' }}>  
                   <Tooltip text={`Price Adjustment Formula:\nPrice per appointment $${pricePerAppointment.toFixed(2)} × [1 + 
-                  (Current Utilization Rate $${utilizationRate.toFixed(2)} – Target Utilization Rate ${targetUtilizationRate}%)]\n
+                  (Current Utilization Rate ${utilizationRate.toFixed(2)}% – Target Utilization Rate ${targetUtilizationRate}%)]\n
                   This formula estimates a price adjustment based on the difference between your current and target utilization rates. 
                   If your utilization is above target, you may be able to increase prices; if below, consider lowering prices.`}>
                     ${(pricePerAppointment * (1 + ((utilizationRate - targetUtilizationRate) / 100))).toFixed(2)}
